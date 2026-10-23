@@ -1,0 +1,20 @@
+{
+  "job_title": "Data Analyst",
+  "match_score": 42,
+  "summary": "You have a good Excel base but lack SQL and visualization.",
+  "skills": [
+    {"name": "SQL", "required_level": 4, "current_level": 1, "priority": "Critical"},
+    {"name": "Excel", "required_level": 4, "current_level": 3, "priority": "Important"}
+  ],
+  "roadmap": [
+    {
+      "week": 1,
+      "focus": "SQL basics",
+      "tasks": ["Learn SELECT, WHERE, JOIN", "Solve 15 practice queries"],
+      "resources": [{"name": "freeCodeCamp SQL course", "type": "video"}],
+      "milestone": "Write a query joining 2 tables"
+    }
+  ],
+  "project": {"title": "Sales dashboard", "description": "Analyze a public dataset and present 3 insights."},
+  "interview_tips": ["Practice explaining your project in 2 minutes"]
+}
