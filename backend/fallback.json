@@ -1,0 +1,21 @@
+{"job_title":"Data Analyst","match_score":42,
+"summary":"You have a decent Excel base but lack SQL, visualization and statistics. Close these first.",
+"skills":[
+{"name":"SQL","required_level":4,"current_level":1,"priority":"Critical"},
+{"name":"Excel","required_level":4,"current_level":3,"priority":"Important"},
+{"name":"Python (pandas)","required_level":3,"current_level":1,"priority":"Critical"},
+{"name":"Data Visualization","required_level":4,"current_level":1,"priority":"Critical"},
+{"name":"Statistics","required_level":3,"current_level":1,"priority":"Important"},
+{"name":"Communication","required_level":4,"current_level":3,"priority":"Important"},
+{"name":"Git","required_level":2,"current_level":0,"priority":"Nice-to-have"}],
+"roadmap":[
+{"week":1,"focus":"SQL basics","tasks":["Learn SELECT, WHERE, ORDER BY","Solve 15 practice queries"],"resources":[{"name":"freeCodeCamp SQL course","type":"video"},{"name":"SQLBolt","type":"interactive"}],"milestone":"Write 10 queries on one table"},
+{"week":2,"focus":"SQL joins and aggregation","tasks":["Practice JOIN, GROUP BY, HAVING","Solve 15 harder queries"],"resources":[{"name":"Mode SQL Tutorial","type":"article"}],"milestone":"Join 2 tables and summarize"},
+{"week":3,"focus":"Python and pandas","tasks":["Load a CSV with pandas","Filter, group and clean data"],"resources":[{"name":"Kaggle Pandas course","type":"interactive"}],"milestone":"Clean a messy dataset"},
+{"week":4,"focus":"Statistics essentials","tasks":["Mean, median, variance, distributions","Learn correlation vs causation"],"resources":[{"name":"Khan Academy Statistics","type":"video"}],"milestone":"Explain 3 stats concepts simply"},
+{"week":5,"focus":"Data visualization","tasks":["Build charts in Power BI or Tableau Public","Learn chart choice basics"],"resources":[{"name":"Tableau Public free training","type":"video"}],"milestone":"Publish a 1-page dashboard"},
+{"week":6,"focus":"Portfolio project","tasks":["Pick a public dataset","Ask 3 questions and answer with data"],"resources":[{"name":"Kaggle Datasets","type":"dataset"}],"milestone":"Project draft complete"},
+{"week":7,"focus":"Storytelling and Git","tasks":["Write insights summary","Push project to GitHub"],"resources":[{"name":"GitHub Skills","type":"interactive"}],"milestone":"Project live on GitHub"},
+{"week":8,"focus":"Interview prep","tasks":["Practice 20 SQL interview questions","Rehearse a 2-minute project pitch"],"resources":[{"name":"StrataScratch free questions","type":"practice"}],"milestone":"Mock interview done"}],
+"project":{"title":"Sales Insights Dashboard","description":"Analyze a public sales dataset with SQL and pandas, then present 3 business insights in a dashboard."},
+"interview_tips":["Explain your project in 2 minutes","Always state the business question first","Be ready to write a JOIN on a whiteboard"]}
