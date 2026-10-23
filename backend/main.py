@@ -1,4 +1,3 @@
-
 import json, os
 from pathlib import Path
 from fastapi import FastAPI
@@ -19,7 +18,9 @@ BASE = Path(__file__).parent
 CANDIDATES = [m for m in [os.getenv("MODEL"), "gemini-flash-latest", "gemini-3.1-flash-lite",
               "gemini-3-flash-preview", "gemini-flash-lite-latest", "gemini-2.5-flash"] if m]
 MODEL = CANDIDATES[0]
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+if not os.getenv("GEMINI_API_KEY"):
+    print("WARNING: GEMINI_API_KEY is missing. Add it in .env (local) or Vercel Environment Variables.")
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY") or "missing")
 
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
@@ -86,5 +87,8 @@ def roadmap(r: Req):
             print(f"AI attempt {attempt + 1} failed:", e)
     return fallback(str(last))
 
-# Serve the frontend from the same server
-app.mount("/", StaticFiles(directory=BASE.parent / "frontend", html=True), name="web")
+# Serve the frontend from backend/public (same folder Vercel serves as static files).
+# The check stops the app from crashing if the folder is missing.
+PUBLIC = BASE / "public"
+if PUBLIC.exists():
+    app.mount("/", StaticFiles(directory=PUBLIC, html=True), name="web")
