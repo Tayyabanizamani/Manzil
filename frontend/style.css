@@ -1,0 +1,63 @@
+.hidden { display:none !important; }
+  body { background:#f3f6fb; color:#0b1224; font-size:17px; font-weight:500; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4 { letter-spacing:-.02em; font-weight:800; line-height:1.2; }
+  .page-title { color:#0b1224; }
+  ::selection { background:#bfdbfe; color:#0b1224; }
+  :focus-visible { outline:3px solid #2563eb; outline-offset:2px; border-radius:6px; }
+
+  /* Navy panels: forced so they always render dark */
+  .navy { background-color:#0a1a33 !important; background-image: radial-gradient(ellipse 70% 60% at 85% -10%, rgba(37,99,235,.38), transparent 60%), linear-gradient(180deg,#0a1a33 0%,#060e1f 100%) !important; color:#ffffff; }
+  .navy .soft { color:#e2e8f0; }
+  .navy .accent { color:#7dd3fc; }
+
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; font-weight:700; font-size:1rem; border-radius:.75rem; padding:.8rem 1.4rem; transition:all .2s ease; cursor:pointer; white-space:nowrap; }
+  .btn:disabled { opacity:.5; cursor:not-allowed; }
+  .btn-primary { background:#1d4ed8; color:#fff; box-shadow:0 10px 24px -12px rgba(29,78,216,.9); }
+  .btn-primary:hover { background:#1e40af; transform:translateY(-1px); }
+  .btn-light { background:#fff; color:#0a1a33; }
+  .btn-light:hover { background:#e8f0ff; }
+  .btn-ghost { border:1.5px solid #94a3b8; background:#fff; color:#0b1224; }
+  .btn-ghost:hover { background:#f1f5fb; }
+  .btn-danger { border:1.5px solid #fca5a5; background:#fff; color:#991b1b; }
+  .btn-danger:hover { background:#fef2f2; }
+
+  .surface { background:#fff; border:1px solid #cbd5e1; border-radius:1rem; box-shadow:0 1px 2px rgba(10,26,51,.05), 0 10px 28px -16px rgba(10,26,51,.2); }
+  .lift { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .lift:hover { transform:translateY(-3px); box-shadow:0 20px 40px -18px rgba(10,26,51,.3); border-color:#93b4e8; }
+
+  .input { width:100%; border:1.5px solid #94a3b8; border-radius:.7rem; padding:.75rem 1rem; background:#fff; color:#0b1224; font-size:1rem; transition:border-color .15s, box-shadow .15s; }
+  .input::placeholder { color:#64748b; }
+  .input:focus { outline:none; border-color:#1d4ed8; box-shadow:0 0 0 4px rgba(29,78,216,.18); }
+  .label { display:block; font-size:.92rem; font-weight:700; color:#0b1224; margin-bottom:.45rem; }
+  .eyebrow { font-size:.8rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:#1e40af; }
+
+  .nav-link { color:#e2e8f0; font-weight:600; font-size:.98rem; padding:.5rem .9rem; border-radius:.6rem; transition:color .15s, background .15s; white-space:nowrap; }
+  .nav-link:hover { color:#fff; background:rgba(255,255,255,.1); }
+  .nav-link.nav-active { color:#fff; background:rgba(255,255,255,.16); }
+
+  .pill { display:inline-flex; align-items:center; gap:.35rem; font-size:.84rem; font-weight:700; padding:.3rem .75rem; border-radius:999px; border:1px solid; }
+  .p-critical { background:#fef2f2; color:#991b1b; border-color:#fca5a5; }
+  .p-important { background:#fff7ed; color:#9a3412; border-color:#fdba74; }
+  .p-nice { background:#f0fdf4; color:#166534; border-color:#86efac; }
+  .p-info { background:#eff6ff; color:#1e40af; border-color:#93c5fd; }
+
+  .step-dot { height:2.4rem; width:2.4rem; border-radius:999px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.95rem; border:2px solid #94a3b8; color:#0b1224; background:#fff; }
+  .step-dot.active { background:#1d4ed8; border-color:#1d4ed8; color:#fff; }
+  .step-dot.done { background:#dbeafe; border-color:#60a5fa; color:#1e40af; }
+  .tab-btn { padding:.7rem; border-radius:.6rem; font-weight:700; font-size:1rem; color:#1e293b; }
+  .tab-btn.active { background:#fff; color:#0b1224; box-shadow:0 1px 3px rgba(10,26,51,.18); }
+
+  .fade-in { animation:fadeIn .5s ease both; }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+  @media print { .no-print { display:none !important; } body { background:#fff; } .surface { box-shadow:none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation:none !important; transition:none !important; } }
+
+/* Logo image used from CSS: faint watermark behind the login page */
+#page-login {
+  background-image:
+    linear-gradient(rgba(243,246,251,.92), rgba(243,246,251,.92)),
+    url("../assets/logo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover, 460px auto;
+}
